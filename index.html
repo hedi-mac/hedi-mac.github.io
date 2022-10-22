@@ -71,7 +71,7 @@
 							<section class="posts">
 								<article>
 									<header>
-										<span class="date">April 24, 2017</span>
+										<span id="date-today" class="date">April 24, 2017</span>
 										<h2><a href="#">Sed magna<br />
 										ipsum faucibus</a></h2>
 									</header>
@@ -224,6 +224,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				n =  new Date();
+				y = n.getFullYear();
+				m = n.getMonth() + 1;
+				d = n.getDate();
+				document.getElementById("date-today").innerHTML = m + "/" + d + "/" + y;
+			</script>
 
 	</body>
 </html>
