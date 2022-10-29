@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<title>Hedi's Art</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="images/icon.png">
+		<link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="assets/css/software.css"/>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .col-4 img {
+                height: 30vh;
+            }
+            .col-6 img {
+                height: 55vh;
+            }
+            blockquote {
+                margin-bottom: -10vh;
+            }
+        </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Hedi's Art</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="software.html">Software Engineering</a></li>
+							<li class="active"><a href="art.html">Art</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+                        <section class="post">
+                            <header class="major">
+                                <h1>Art &<br/> Drawings</h1>
+                            </header>
+                            <h2>Cubism</h2>
+                            <blockquote>"When we discovered cubism, we did not have the aim of discovering cubism. We only wanted to express what was in us." ~ Pablo Picasso</blockquote>
+                        </section>
+                        <div class="box alt">
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-6"><span class="image fit"><img src="images/c1.png" alt="" /></span></div>
+                                <div class="col-6"><span class="image fit"><img src="images/c2.png" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/c3.png" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/c4.png" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/c5.png" alt="" /></span></div>
+                            </div>
+                        </div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script>
+                import gsap from 'https://cdn.skypack.dev/gsap';
+
+                const BOUNDS = 50;
+                document.addEventListener('pointermove', ({ x, y }) => {
+                const newX = gsap.utils.mapRange(0, window.innerWidth, -BOUNDS, BOUNDS, x);
+                const newY = gsap.utils.mapRange(0, window.innerHeight, BOUNDS, -BOUNDS, y);
+                gsap.set(document.documentElement, {
+                    '--rotate-x': newY,
+                    '--rotate-y': newX });
+
+                });
+        </script>
+	</body>
+</html>
