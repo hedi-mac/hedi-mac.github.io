@@ -1,0 +1,331 @@
+
+  .scene .cuboid {
+	width: 100%;
+	height: 100%;
+	position: relative;
+  }
+  .cuboid__side:nth-of-type(1) {
+	height: calc(var(--thickness) * 1vmin);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	transform: translate(0, -50%) rotateX(90deg);
+  }
+  .cuboid__side:nth-of-type(2) {
+	height: 100%;
+	width: calc(var(--thickness) * 1vmin);
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(50%, -50%) rotateY(90deg);
+  }
+  .cuboid__side:nth-of-type(3) {
+	width: 100%;
+	height: calc(var(--thickness) * 1vmin);
+	position: absolute;
+	bottom: 0;
+	transform: translate(0%, 50%) rotateX(90deg);
+  }
+  .cuboid__side:nth-of-type(4) {
+	height: 100%;
+	width: calc(var(--thickness) * 1vmin);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(-50%, -50%) rotateY(90deg);
+  }
+  .cuboid__side:nth-of-type(5) {
+	height: 100%;
+	width: 100%;
+	transform: translate3d(0, 0, calc(var(--thickness) * 0.5vmin));
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  .cuboid__side:nth-of-type(6) {
+	height: 100%;
+	width: 100%;
+	transform: translate3d(0, 0, calc(var(--thickness) * -0.5vmin)) rotateY(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  .st *,
+  .st *:after,
+  .st *:before {
+	box-sizing: border-box;
+	transform-style: preserve-3d;
+  }
+
+  :root {
+	--bg: #171726;
+	--speed: 6;
+	--delay-coefficient: -1.2s;
+	--b-1: #e77b23;
+	--b-2: #dc7118;
+	--b-3: #cf6a17;
+	--b-4: #b85e14;
+	--t-1: #8c8273;
+	--t-2: #70685c;
+	--t-3: #544e45;
+	--t-4: #38342e;
+  }
+  .scene img {
+	opacity: 0.25;
+	position: fixed;
+	height: 50vmin;
+	top: 50%;
+	left: 50%;
+	transform: translate(-47.25%, -50%);
+  }
+  .scene {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 100vmin) rotateX(-24deg) rotateY(34deg) rotateX(calc(var(--rotate-x, 0) * 1deg)) rotateY(calc(var(--rotate-y, 0) * 1deg));
+  }
+  .stacked {
+	height: 50vmin;
+	width: 33vmin;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  .stacked__tray {
+	position: absolute;
+	bottom: 9%;
+	left: 50%;
+	height: 15vmin;
+	width: 33vmin;
+	transform: translate(-50%, 0%);
+  }
+  .stacked__stack {
+	position: absolute;
+	bottom: 23.5%;
+	left: 50%;
+	height: 7.5%;
+	width: 55%;
+	transform: translate(-50%, 0);
+  }
+  .stacked__block {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	animation: stack calc(var(--speed, 0) * 1s) calc(var(--delay, 0) * var(--delay-coefficient)) infinite ease-in reverse;
+  }
+  .tray__side {
+	position: absolute;
+  }
+  .tray__side--bottom {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 24%;
+  }
+  .tray__side--bottom .cuboid div:nth-of-type(1):after {
+	content: '';
+	height: 24vmin;
+	width: 50%;
+	position: absolute;
+	background: radial-gradient(rgba(64,64,64,0.3) 75%, transparent);
+	filter: blur(1vmin);
+	top: 50%;
+	left: 50%;
+	-webkit-animation: strong calc(var(--delay-coefficient) * -1) infinite;
+			animation: strong calc(var(--delay-coefficient) * -1) infinite;
+	transform: translate(-50%, -50%);
+  }
+  @-webkit-keyframes strong {
+	0%, 100% {
+	  opacity: 0.5;
+	}
+	50% {
+	  opacity: 1;
+	}
+  }
+  @keyframes strong {
+	0%, 100% {
+	  opacity: 0.5;
+	}
+	50% {
+	  opacity: 1;
+	}
+  }
+  .tray__side--left {
+	left: 0;
+	width: 11%;
+	height: 100%;
+  }
+  .tray__side--right {
+	right: 0;
+	width: 11%;
+	height: 100%;
+  }
+  .scene .block {
+	animation: drop calc(var(--speed, 0) * 1s) calc(var(--delay, 0) * var(--delay-coefficient)) infinite ease-out reverse;
+	transform-origin: 75% 50%;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+  }
+  .cuboid--block div {
+	-webkit-animation: fade calc(var(--speed, 0) * 1s) calc(var(--delay, 0) * var(--delay-coefficient)) infinite ease-in-out;
+			animation: fade calc(var(--speed, 0) * 1s) calc(var(--delay, 0) * var(--delay-coefficient)) infinite ease-in-out;
+  }
+  .cuboid--tray {
+	--thickness: 33;
+  }
+  .cuboid--tray div:nth-of-type(1) {
+	background: var(--t-1);
+  }
+  .cuboid--tray div:nth-of-type(2) {
+	background: var(--t-2);
+  }
+  .cuboid--tray div:nth-of-type(3) {
+	background: var(--t-2);
+  }
+  .cuboid--tray div:nth-of-type(4) {
+	background: var(--t-4);
+  }
+  .cuboid--tray div:nth-of-type(5) {
+	background: var(--t-3);
+  }
+  .cuboid--tray div:nth-of-type(6) {
+	background: var(--t-2);
+  }
+  .cuboid--block {
+	--thickness: 24;
+  }
+  .cuboid--block div:nth-of-type(1) {
+	background: var(--b-1);
+  }
+  .cuboid--block div:nth-of-type(1):after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: radial-gradient(rgba(92,58,10,0.4) 75%, transparent);
+	filter: blur(1vmin);
+	-webkit-animation: fadeOver calc(var(--speed, 0) * 1s) calc(var(--delay, 0) * var(--delay-coefficient)) infinite ease-in-out;
+			animation: fadeOver calc(var(--speed, 0) * 1s) calc(var(--delay, 0) * var(--delay-coefficient)) infinite ease-in-out;
+  }
+  @-webkit-keyframes fadeOver {
+	0%, 20%, 100% {
+	  opacity: 0;
+	}
+	30%, 90% {
+	  opacity: 1;
+	}
+  }
+  @keyframes fadeOver {
+	0%, 20%, 100% {
+	  opacity: 0;
+	}
+	30%, 90% {
+	  opacity: 1;
+	}
+  }
+  .cuboid--block div:nth-of-type(2) {
+	background: var(--b-2);
+  }
+  .cuboid--block div:nth-of-type(3) {
+	background: var(--b-4);
+  }
+  .cuboid--block div:nth-of-type(4) {
+	background: var(--b-2);
+  }
+  .cuboid--block div:nth-of-type(5) {
+	background: var(--b-3);
+  }
+  .cuboid--block div:nth-of-type(6) {
+	background: var(--b-2);
+  }
+  @-webkit-keyframes stack {
+	to {
+	  transform: translate(58%, 0);
+	}
+  }
+  @keyframes stack {
+	to {
+	  transform: translate(58%, 0);
+	}
+  }
+  @-webkit-keyframes drop {
+	to {
+	  transform: translate(0, -560%) rotate(54deg);
+	}
+  }
+  @keyframes drop {
+	to {
+	  transform: translate(0, -560%) rotate(54deg);
+	}
+  }
+  @-webkit-keyframes fade {
+	0%, 100% {
+	  opacity: 0;
+	}
+	10%, 90% {
+	  opacity: 1;
+	}
+  }
+  @keyframes fade {
+	0%, 100% {
+	  opacity: 0;
+	}
+	10%, 90% {
+	  opacity: 1;
+	}
+  }
+
+.t {
+	float:left;
+}
+
+.st {
+	margin-left: 45%;
+	margin-top: 8vh;
+}
+.stit {
+	text-align: left;
+	width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+	.st {
+		height: 24vh;
+		margin-left: 0%;
+		width: 100%;
+		margin-top: 0px;
+		margin-bottom: 2%;
+	}
+  }
+
+
+
+  .experience {
+	margin-bottom: 0px;
+  }
+
+  .img-exp {
+	cursor: pointer;
+  }
+
+  .small {
+	margin-top: 5px;
+  }
+
+  .img-ed {
+	height: 120px;
+	width: 139.71px;
+	cursor: pointer;
+  }
+
+  .hr-edt {
+	margin: 0px;
+  }
+
+  
