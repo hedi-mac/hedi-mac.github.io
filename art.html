@@ -111,15 +111,15 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form method="post" enctype="text/plain">
 								<div class="fields">
 									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<label for="subject">Subject</label>
+										<input type="text" name="subject" id="subject"/>
 									</div>
 									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name"/>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
@@ -127,7 +127,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="button" onClick="sendEmail()" value="Send Message"/></li>
 								</ul>
 							</form>
 						</section>
@@ -184,6 +184,24 @@
                     '--rotate-y': newX });
 
                 });
-        </script>
+
+				function sendEmail() {
+					oForm = document.forms[0];
+					Email.send({
+						Host : "smtp.elasticemail.com",
+						Username : "hedimaac@gmail.com",
+						Password : "60A6FA5E9CEDEBB2C5A62E899487CDEFB88E",
+						To : 'hedimaac@gmail.com',
+						From : 'hedimaac@gmail.com',
+						Subject : oForm.elements["subject"].value,
+						Body : "<html>From : <strong>"+oForm.elements["name"].value+"</strong><br/>"+oForm.elements["message"].value+"</html>"
+					}).then(
+					message => alert("Email sent sucessfully . . .")
+					);
+					oForm.elements["name"].value = ""
+					oForm.elements["subject"].value = ""
+					oForm.elements["message"].value = ""
+				}
+			</script>
 	</body>
 </html>
