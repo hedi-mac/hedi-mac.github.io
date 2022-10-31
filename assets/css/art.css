@@ -1,0 +1,26 @@
+.col-3 img {
+    height: 25vh;
+}
+.mo .col-3 img {
+    height: 30vh;
+}
+.col-4 img {
+    height: 35vh;
+}
+.col-6 img {
+    height: 65vh;
+}
+@media screen and (max-width: 600px) {
+    .col-3 img {
+    height: 15vh;
+    }
+    .mo .col-3 img {
+        height: 16vh;
+    }
+    .col-4 img {
+        height: 18vh;
+    }
+    .col-6 img {
+        height: 38vh;
+    }
+}
