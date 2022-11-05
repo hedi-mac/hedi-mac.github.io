@@ -5,7 +5,7 @@
 	content: "Hedi's art";
 	margin: auto;
 	margin-top:3vh;
-	margin-left: 10%;
+	margin-left: 12%;
 	width: 100%;
 
 }
@@ -73,7 +73,7 @@
 			display: block;
 			width: inherit;
 			height: inherit;
-			background: url("images/c2.png");
+			background: url('https://cdn.dribbble.com/users/5031/screenshots/7008431/dribbble.png');
 			position: absolute;
 			-webkit-transform-style: preserve-3d;
 			        transform-style: preserve-3d;
@@ -88,14 +88,14 @@
 
 			.slide.x:after {
 				content: '';
-				background-image: url("images/dr4.png");
+				background-image: url('https://cdn.dribbble.com/users/730703/screenshots/6988911/elenidebo-thisiscolossal-theroad-forchicagodesignmuseum.jpg');
 				-webkit-transform: translateZ(100px) rotateZ(-90deg);
 				        transform: translateZ(100px) rotateZ(-90deg);
 			}
 
 			.slide.x:before {
 				content: '';
-				background-image: url("images/d3.jpg");
+				background-image: url('https://cdn.dribbble.com/users/329207/screenshots/6220354/bemocs_geneseo_sailing.jpg');
 				-webkit-transform: translateZ(-100px) rotateZ(-90deg);
 				        transform: translateZ(-100px) rotateZ(-90deg);
 			}
@@ -107,14 +107,14 @@
 
 			.slide.y:after {
 				content: '';
-				background-image: url("images/v1.png");
+				background-image: url('https://cdn.dribbble.com/users/63407/screenshots/5705689/dribbble_moonlight_2x.png');
 				-webkit-transform: translateZ(100px) scale(-1);
 				        transform: translateZ(100px) scale(-1);
 			}
 
 			.slide.y:before {
 				content: '';
-				background-image: url("images/v2.png");
+				background-image: url('https://cdn.dribbble.com/users/1355613/screenshots/6441984/landscape_2x.jpg');
 				-webkit-transform: translateZ(-100px);
 				        transform: translateZ(-100px);
 			}
