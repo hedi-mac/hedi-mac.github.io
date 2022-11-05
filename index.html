@@ -345,6 +345,7 @@
 <script>
 		var index = 1;
 		change();
+		/*
 		var readyStateCheckInterval = setInterval(function() {
 			if (document.readyState === "complete") {
 				console.log("yes")
@@ -352,7 +353,7 @@
 				changeBack();
 			}
 		}, 6000); 
-
+		*/
 		function change() {
 			var img = document.getElementsByClassName('reflection-content')[0];
 			img.style.backgroundImage = "url(images/i"+index+".jpg)";
