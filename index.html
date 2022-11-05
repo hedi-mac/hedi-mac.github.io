@@ -15,6 +15,7 @@
 				
 				<!-- Wrapper -->
 				<div id="wrapper" class="fade-in fd-an">
+					<!--
 					<div class="bd b">
 						<div class="slider">
 							<div class="container">
@@ -51,6 +52,7 @@
 							</h1>
 						</div>
 					</div>
+					-->
 					<div class="content">
 						<!-- Intro -->
 							<div id="intro">
@@ -345,15 +347,15 @@
 <script>
 		var index = 1;
 		change();
-		
+		/*
 		var readyStateCheckInterval = setInterval(function() {
-			//if (document.readyState === "complete") {
+			if (document.readyState === "complete") {
 				console.log("yes")
 				clearInterval(readyStateCheckInterval);
 				changeBack();
-			//}
+			}
 		}, 0); 
-		
+		*/
 		function change() {
 			var img = document.getElementsByClassName('reflection-content')[0];
 			img.style.backgroundImage = "url(images/i"+index+".jpg)";
@@ -363,6 +365,7 @@
 			}
 			setTimeout(change, 5000);
 		}
+		/*
 		function changeBack() {
 			var bd = document.getElementById('wrapper');
 			bd.classList.remove('fd-an');
@@ -371,6 +374,7 @@
 			var b = document.getElementsByClassName('content')[0];
 			b.style.visibility = "visible";
 		}
+		*/
 </script>
 
 	</body>
