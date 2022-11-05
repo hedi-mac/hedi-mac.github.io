@@ -1,6 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-
+/*
 .bd .stage-title .layer:after {
 	content: "Hedi's art";
 	margin: auto;
@@ -235,60 +235,7 @@
 	font-size: smaller;
 	opacity: .75;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 #frame{
 	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141041/banksy-frame.png);
@@ -11011,8 +10958,3 @@ a, .cont {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-weight: 95;
   }
-
-
-
-
-
