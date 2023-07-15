@@ -3,7 +3,7 @@ function sendEmail() {
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "hedimaac@gmail.com",
-        Password : "60A6FA5E9CEDEBB2C5A62E899487CDEFB88E",
+        Password : "E9538B66C2E50EDD9B532076954E33B9B9DEEB80AF38735B8C479F4BB8607F9E7934A4EB5DEBD4A6EE401BBEB0EC580C",
         To : 'hedimaac@gmail.com',
         From : 'hedimaac@gmail.com',
         Subject : oForm.elements["subject"].value,
