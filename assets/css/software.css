@@ -354,4 +354,10 @@ article p {
 		height: 28vh;
 	}
   }
+  .fasize {
+	font-size: 150%;
+  }
+  .img-demo {
+	width:100%;display: flex;justify-content: center;margin-top:5px;
+  }
   
