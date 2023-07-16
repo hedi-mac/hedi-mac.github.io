@@ -333,18 +333,13 @@ article p {
 	text-align: center;
   }
 
-  .fi {
-	height: 45.5vh;
-	border: 4px solid rgb(76, 66, 61, 0.95);
-  }
+
 
   .ase {
 	height: 42.2vh;
   }
 
-  .fi:hover {
-	border: 4px solid rgb(76, 66, 61, 0.95);
-  }
+
 
   .table-wrapper {
 	margin-bottom: -6%;
