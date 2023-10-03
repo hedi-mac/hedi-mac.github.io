@@ -10984,3 +10984,8 @@ a, .cont {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-weight: 95;
   }
+
+video::poster {
+            width: 320px; /* Set the width of the poster image */
+            height: 180px; /* Set the height of the poster image */
+        }
