@@ -3934,12 +3934,18 @@ input, select, textarea {
 		.image img {
 			display: block;
 		}
+		.image video {
+			display: block;
+		}
 
 		.image.left, .image.right {
 			max-width: 40%;
 		}
 
 			.image.left img, .image.right img {
+				width: 100%;
+			}
+.image.left video, .image.right video {
 				width: 100%;
 			}
 
@@ -3968,6 +3974,9 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+.image.fit video {
+				width: 100%;
+			}
 
 		.image.main {
 			display: block;
@@ -3980,6 +3989,9 @@ input, select, textarea {
 			}
 
 			.image.main img {
+				width: 100%;
+			}
+.image.main video {
 				width: 100%;
 			}
 
@@ -4007,6 +4019,20 @@ input, select, textarea {
 		}
 
 		a.image:hover img {
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+
+a.image video {
+			-moz-transition: -moz-transform 0.2s ease-out;
+			-webkit-transition: -webkit-transform 0.2s ease-out;
+			-ms-transition: -ms-transform 0.2s ease-out;
+			transition: transform 0.2s ease-out;
+		}
+
+		a.image:hover video {
 			-moz-transform: scale(1.05);
 			-webkit-transform: scale(1.05);
 			-ms-transform: scale(1.05);
