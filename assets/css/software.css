@@ -360,4 +360,11 @@ article p {
   .img-demo {
 	width:100%;display: flex;justify-content: center;margin-top:5px;
   }
+.demo {
+	padding:90px;padding-top:0px; padding-bottom:0px;
+}
+@media screen and (max-width: 800px) {
+.demo {
+	padding:0px;
+}}
   
