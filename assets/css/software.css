@@ -354,6 +354,11 @@ article p {
 		height: 28vh;
 	}
   }
+	@media screen and (min-width: 600px) {
+	  .fi-dip {
+		  height:630px;padding-right:105px;padding-left:105px;
+	  }
+	}
   .fasize {
 	font-size: 150%;
   }
