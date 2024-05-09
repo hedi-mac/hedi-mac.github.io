@@ -356,7 +356,7 @@ article p {
   }
 	@media screen and (min-width: 600px) {
 	  .fi-dip {
-		  height:630px;padding-right:105px;padding-left:105px;
+		  height:645px;padding-right:100px;padding-left:100px;
 	  }
 	}
   .fasize {
